@@ -1,0 +1,11 @@
+main{
+    background-color: #2c2925;
+}
+h3{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.nav-link, .nav-link:hover, .nav-link:focus, .nav-link:active{
+    color:bisque;
+}

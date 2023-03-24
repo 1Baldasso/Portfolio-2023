@@ -1,0 +1,27 @@
+.social-item
+{
+    height: 3rem;
+    width: 3rem;
+}
+#sapien-image
+{
+    border-radius: 3%;
+    box-shadow: .2rem .2rem 1rem #9b7e52a1;
+    width: calc((100vw *0.3));
+}
+.invert-color
+{
+    filter: invert(100%);
+}
+a:link, a:visited, a:active, a:hover, a:focus
+{
+    text-decoration: none;
+    color: inherit;
+}
+@media screen and (max-width: 500px)
+{
+    #sapien-image
+    {
+        display: none;
+    }
+}

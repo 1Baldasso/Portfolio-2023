@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap');
+
+.header
+{
+    background-image: linear-gradient(#9b7e52,#2c2925);
+}
+#profile-pic
+{
+    width: 8rem;
+    height: auto;
+    border-radius: 1.2rem;
+    box-shadow: 10px 10px 10px #000000;
+}
+.meu-link, #meu-nome
+{
+    color: #f9e8d2;
+}
+#meu-nome
+{
+    font-family: 'Montserrat', monospace,'Cinzel Decorative', cursive;
+    font-weight: 600;
+    font-size: 3rem;
+    text-shadow: 5px 5px 3px #2c2925a1;
+    align-self: flex-end;
+}
+.meu-link
+{
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+.meu-link:hover
+{
+  text-shadow: 5px 5px 3px #2c2925a1;
+  font-size: calc(1.8rem + 5px);
+  transition: all 80ms ease-in-out 80ms;
+}
+
+#reset
+{
+    margin:0.01rem;
+    padding: 0.01rem;
+}
+
+@media screen and (max-width: 992px) {
+    .meu-link
+    {
+        color:#9b7e52;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #meu-nome, .meu-link
+    {
+        font-size: calc((100vw/365.7143)*16);
+    }
+}
+@media screen and (max-width: 431px) {
+    #profile-pic
+    {
+        width: 6rem;
+    }
+}
+@media screen and (max-width: 374px) {
+    #profile-pic
+    {
+        width: 4rem;
+    }
+}
+@media screen and (max-width: 315px) {
+    #profile-pic
+    {
+        width: 3rem;
+    }
+}
+@media screen and (max-width: 270px) {
+    #profile-pic
+    {
+        display: none;
+        
+    }
+}

@@ -1,0 +1,27 @@
+#reset-a, #reset-a:visited, #reset-a:active, #reset-a:hover
+{
+    text-decoration: none;
+    color:inherit;
+}
+.left-item{
+    border: 2px solid #9b7e52;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-radius: 25px;
+}
+.right-item{
+    border: 2px solid #9b7e52;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-radius: 25px;
+}
+.project-image{
+    width: 40%;
+    border-radius: 3%;
+    box-shadow: .2rem .2rem 1rem #9b7e52a1;
+}
+#reset-a p
+{
+    text-align: justify;
+    font-size: 0.9rem;
+}
