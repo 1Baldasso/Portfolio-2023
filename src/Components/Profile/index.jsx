@@ -1,25 +1,38 @@
+import { useEffect, useState } from 'react'
 import Container from 'react-bootstrap/Container'
-import PersonData from '../../Assets/Data/PersonData'
 import TeacherPic from '../../Assets/Images/TeacherPic.jpg'
+import LanguageController from '../../Controller/LanguageController.ts'
 import './styles.css'
 export default function Profile() {
-    const Person = PersonData.Person
+    
+    useEffect(() => {
+        document.addEventListener("languageChange", HandleChangeLanguage);
+        return () => {
+            document.removeEventListener("languageChange", HandleChangeLanguage);
+        }
+    }, []);
+    function HandleChangeLanguage() {
+        setPerson(LanguageController.instance.getPersonData());
+        setMenuData(LanguageController.instance.getMenuData());
+    }
+    const [Person,setPerson] = useState(LanguageController.instance.getPersonData());
+    const [MenuData, setMenuData] = useState(LanguageController.instance.getMenuData());
     return(
         <main>
             <Container>
-                <h3>About me</h3>
+                <h3>{MenuData.aboutMe}</h3>
                 <h5 style={{fontStyle:'italic'}}>{Person.title}</h5>
                 <div className='d-flex flex-row' id="about-me">
                     <p>{Person.description}</p>
                     <img src={TeacherPic} id="teacher-pic"/>
                 </div>
-                <h2>Skills</h2>
+                <h2>{MenuData.skills}</h2>
                 <div className='d-flex flex-row gap-5 flex-wrap justify-content-center h-auto m-5'>
                     {Person.skills.map((skill, index) => {
                         return <img key={index} src={skill.image} alt={skill.name} className="skill-icon"/>
                     })}
                 </div>
-                <h2 className='ph-2'>Notable Experiences</h2>
+                <h2 className='ph-2'>{MenuData.experiences}</h2>
                 <div className='m-0'>
                     {Person.experiences.map((experience, index) => {
                         return (

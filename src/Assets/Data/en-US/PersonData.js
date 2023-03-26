@@ -1,5 +1,6 @@
-import SQLicon from '../Images/SQLicon.png'
-import Unityicon from '../Images/Unityicon.svg'
+import SQLicon from '../../Images/SQLicon.png'
+import Unityicon from '../../Images/Unityicon.svg'
+
 export default {
     Person: {
         name: "Lucas Baldasso",
