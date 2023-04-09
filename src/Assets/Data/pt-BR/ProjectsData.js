@@ -6,6 +6,7 @@ import LORPrototiper from '../../Images/Projects/LORPrototiper.jpg'
 import SquidCardGame from '../../Images/Projects/SquidCardGame.png'
 import MiaIsBackHome from '../../Images/Projects/MiaIsBackHome.png'
 import Runner25D from '../../Images/Projects/Runner25D.jpg'
+import FullstackStoreNode from '../../Images/Projects/FullstackStoreNode.png';
 
 export default 
 { 
@@ -14,21 +15,21 @@ export default
         "Backend":[
             {
                 "id":1,
-                "name":"Orçamento Semanal de Flores",
-                "description":"Durante o meu tempo trabalhando na empresa da minha família, desenvolvi um projeto que surgiu da necessidade diária de encomendar flores semanalmente. Testemunhei o quão doloroso e ineficiente esse processo pode ser, e decidi criar uma solução para torná-lo mais eficaz e simplificado.\n O projeto foi iniciado duas vezes: na primeira, eu estava começando a usar o WinForms e, na segunda, após um intervalo de tempo, percebi que a abordagem anterior estava confusa e imprecisa. Nessa segunda tentativa, com mais experiência em C# e Arquitetura .NET, consegui reescrever o código com mais clareza e organização, tornando-o muito mais fácil de entender e utilizar.",
-                "image":Flower,
-                "projectUrl":"https://github.com/lufloresdecor/Orcamento-de-Flores",
-                "date":"Em andamento",
-                "techs":"C#, .NET, Entity Framework, SQL Server, Windows Forms"
-            },
-            {
-                "id":2,
                 "name":"Loja Fake Projeto Fullstack",
                 "description":"Este projeto foi criado como parte de uma entrevista de emprego. Fui solicitado a desenvolver um projeto fullstack e, para isso, criei meu próprio backend e API utilizando o Entity Framework e o SQL Server, e utilizei o ASP.NET MVC para o frontend. A autenticação foi realizada através da criptografia da senha e comparação com a senha armazenada no banco de dados.\n Esta experiência me proporcionou uma ótima oportunidade para aprimorar minhas habilidades em desenvolvimento fullstack e me desafiar a trabalhar com ferramentas e tecnologias que ainda não havia utilizado anteriormente.",
                 "image":FullstackStore,
                 "projectUrl":"https://github.com/1Baldasso/Desafio-Teste-ComunikiMe",
                 "date":"02-26-2023",
                 "techs":"C#, RESTful API ,ASP.NET MVC, Entity Framework, SQL Server"
+            },
+            {
+                "id":2,
+                "name":"Fullstack Store Node + React",
+                "description":"Eu desenvolvi um projeto Fullstack como parte de um teste para a vaga de desenvolvedor, utilizando NodeJS e React no backend e frontend, respectivamente. O projeto consiste em uma listagem de produtos que pode ser filtrada por categoria (ex: frios, laticínios) e ordenada por critérios como menor preço, maior preço ou nome. O frontend também possui um recurso de pesquisa por nome de produto e uma tela de detalhes para cada item listado.\n Além disso, foi implementado um carrinho de compras com botões para adicionar e remover itens, exibindo apenas o valor total do carrinho (sem checkout). No backend, foi desenvolvida uma API REST seguindo as boas práticas do Clean Code, com testes unitários e documentação do código. O banco de dados escolhido foi o MongoDB.\n O objetivo do projeto foi demonstrar minhas habilidades como desenvolvedor Fullstack, utilizando tecnologias modernas e populares como NodeJS, React e MongoDB, além de aplicar conceitos de Clean Code, testes unitários e documentação de código.",
+                "image":FullstackStoreNode,
+                "projectUrl":"https://github.com/1Baldasso/Desafio-Teste-NodeReact",
+                "date":"04-07-2023",
+                "techs":"Node JS, RESTful API, NestJS, React, MongoDB"
             },
             {
                 "id":3,
@@ -47,6 +48,15 @@ export default
                 "projectUrl":"https://github.com/1Baldasso/Desafio-Laravel",
                 "date":"02-14-2023",
                 "techs":"PHP, RESTful API, Laravel, MySQL"
+            },
+            {
+                "id":5,
+                "name":"Orçamento Semanal de Flores",
+                "description":"Durante o meu tempo trabalhando na empresa da minha família, desenvolvi um projeto que surgiu da necessidade diária de encomendar flores semanalmente. Testemunhei o quão doloroso e ineficiente esse processo pode ser, e decidi criar uma solução para torná-lo mais eficaz e simplificado.\n O projeto foi iniciado duas vezes: na primeira, eu estava começando a usar o WinForms e, na segunda, após um intervalo de tempo, percebi que a abordagem anterior estava confusa e imprecisa. Nessa segunda tentativa, com mais experiência em C# e Arquitetura .NET, consegui reescrever o código com mais clareza e organização, tornando-o muito mais fácil de entender e utilizar.",
+                "image":Flower,
+                "projectUrl":"https://github.com/lufloresdecor/Orcamento-de-Flores",
+                "date":"Em andamento",
+                "techs":"C#, .NET, Entity Framework, SQL Server, Windows Forms"
             }
         ],
         "Games":[

@@ -6,6 +6,7 @@ import LORPrototiper from '../../Images/Projects/LORPrototiper.jpg'
 import SquidCardGame from '../../Images/Projects/SquidCardGame.png'
 import MiaIsBackHome from '../../Images/Projects/MiaIsBackHome.png'
 import Runner25D from '../../Images/Projects/Runner25D.jpg'
+import FullstackStoreNode from '../../Images/Projects/FullstackStoreNode.png'
 export default 
 { 
     Projects: 
@@ -13,21 +14,21 @@ export default
         "Backend":[
             {
                 "id":1,
-                "name":"Flower Budget Backend",
-                "description":"I developed this project while working for my family's company, aiming to address the daily struggle of weekly flower ordering. Witnessing the inefficiencies and pains our team experienced, I sought to create a solution that would simplify and streamline the process. The project underwent two iterations, the first using WinForms and the second requiring a restart due to its messy implementation. With enhanced expertise in C# and .NET Architecture, I was able to write cleaner, more comprehensible code, resulting in a highly efficient and user-friendly solution.",
-                "image":Flower,
-                "projectUrl":"https://github.com/lufloresdecor/Orcamento-de-Flores",
-                "date":"In Progress",
-                "techs":"C#, .NET, Entity Framework, SQL Server, Windows Forms"
-            },
-            {
-                "id":2,
                 "name":"Fake Store Fullstack",
                 "description":"As part of a job interview, I created a full-stack project that allowed me to showcase my skills in back-end and front-end development. Using Entity Framework and SQL Server, I developed a custom backend and API, and utilized ASP.NET MVC for the front-end. Authentication was implemented by encrypting passwords and comparing them to those stored in the database. This project provided me with the opportunity to expand my knowledge and experience working with new tools and technologies, while honing my full-stack development skills.",
                 "image":FullstackStore,
                 "projectUrl":"https://github.com/1Baldasso/Desafio-Teste-ComunikiMe",
                 "date":"02-26-2023",
                 "techs":"C#, RESTful API ,ASP.NET MVC, Entity Framework, SQL Server"
+            },
+            {
+                "id":2,
+                "name":"Fullstack Store Node + React",
+                "description":"I developed a Fullstack project as part of a developer job test, using NodeJS and React in the backend and frontend, respectively. The project consists of a product listing that can be filtered by category (e.g. cold cuts, dairy) and sorted by criteria such as lowest price, highest price, or name. The frontend also has a search feature by product name and a details screen for each listed item. In addition, a shopping cart was implemented with buttons to add and remove items, displaying only the total value of the cart (without checkout). On the backend, a RESTful API was developed following Clean Code best practices, with unit tests and code documentation. The chosen database was MongoDB. The goal of the project was to demonstrate my skills as a Fullstack developer, using modern and popular technologies such as NodeJS, React, and MongoDB, as well as applying concepts of Clean Code, unit tests, and code documentation.",
+                "image":FullstackStoreNode,
+                "projectUrl":"https://github.com/1Baldasso/Desafio-Teste-NodeReact",
+                "date":"04-07-2023",
+                "techs":"Node JS, RESTful API, NestJS, React, MongoDB"
             },
             {
                 "id":3,
@@ -46,7 +47,17 @@ export default
                 "projectUrl":"https://github.com/1Baldasso/Desafio-Laravel",
                 "date":"02-14-2023",
                 "techs":"PHP, RESTful API, Laravel, MySQL"
-            }
+            },
+            {
+                "id":5,
+                "name":"Flower Budget Backend",
+                "description":"I developed this project while working for my family's company, aiming to address the daily struggle of weekly flower ordering. Witnessing the inefficiencies and pains our team experienced, I sought to create a solution that would simplify and streamline the process. The project underwent two iterations, the first using WinForms and the second requiring a restart due to its messy implementation. With enhanced expertise in C# and .NET Architecture, I was able to write cleaner, more comprehensible code, resulting in a highly efficient and user-friendly solution.",
+                "image":Flower,
+                "projectUrl":"https://github.com/lufloresdecor/Orcamento-de-Flores",
+                "date":"In Progress",
+                "techs":"C#, .NET, Entity Framework, SQL Server, Windows Forms"
+            },
+            
         ],
         "Games":[
             {
