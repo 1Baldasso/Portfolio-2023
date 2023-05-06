@@ -15,6 +15,10 @@ function App() {
           <meta charSet="utf-8" />
           <title>Lucas Baldasso</title>
           <link rel="canonical" href="https://1baldasso-portfolio.vercel.app/" />
+          <meta
+            name="description"
+            content="Portfolio Lucas Baldasso feito utilizando React"
+          />
         </Helmet>
       </HelmetProvider>
         <Routes>
