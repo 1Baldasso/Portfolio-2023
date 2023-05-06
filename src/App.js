@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import {Routes, Route} from 'react-router-dom';
 import {Helmet, HelmetProvider} from 'react-helmet-async';
@@ -14,11 +13,7 @@ function App() {
         <Helmet>
           <meta charSet="utf-8" />
           <title>Lucas Baldasso</title>
-          <link rel="canonical" href="https://1baldasso-portfolio.vercel.app/" />
-          <meta
-            name="description"
-            content="Portfolio Lucas Baldasso feito utilizando React"
-          />
+          <link rel="canonical" href="https://1baldasso.vercel.app/" />
         </Helmet>
       </HelmetProvider>
         <Routes>
