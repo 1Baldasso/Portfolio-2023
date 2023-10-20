@@ -1,26 +1,22 @@
 import { useEffect, useState } from "react";
-import Container from "react-bootstrap/Container";
 import './styles.css'
 export default function ProjectItem(props)
 {
     const [isRow, setIsRow] = useState(true);
+    const handleResize = () => {
+        if(window.innerWidth < 1048){
+            setIsRow(false);
+        }
+        else{
+            setIsRow(true);
+        }
+    }
     useEffect(() => {
-        const mediaQuery = window.matchMedia('(max-width: 768px)'); // Define o breakpoint
-    
-        // Função a ser executada quando a largura da tela mudar
-        const handleMediaQueryChange = (event) => {
-          if (event.matches) {
-            setIsRow(false); // Se a tela for menor que 768px, muda para flex-column
-          } else {
-            setIsRow(true); // Caso contrário, muda para flex-row
-          }
-        };
-    mediaQuery.addEventListener("change",handleMediaQueryChange)
-    handleMediaQueryChange(mediaQuery);
-    return () => {
-        mediaQuery.removeEventListener("change",handleMediaQueryChange);
-        };
-    }, []);
+        window.addEventListener('resize', handleResize)
+        return () => {
+            window.removeEventListener('resize', handleResize)
+        }
+    }, [])
     const project = props.project;
     const pureClassName = "m-5 d-flex gap-3 align-items-center justify-content-between p-3";
     let className1 = "";
@@ -33,18 +29,30 @@ export default function ProjectItem(props)
     else
         className1 = pureClassName + " flex-row right-item";
     return(
-        <a href={project.projectUrl} target="_blank" id="reset-a">
+        <div id="reset-a">
             <div className={className1}>
-                <div>
+                <div className="w-75">
                     <h2 style={{textAlign:"center"}}>{project.name}</h2>
                     <p>{project.description}</p>
                     <h5>Release status:</h5>
                     <p>{project.date}</p>
                     <h5>Techs</h5>
                     <p>{project.techs}</p>
+                    
                 </div>
-                <img src={project.image} className="project-image"/>
+                <div className="w-50">
+                    <img src={project.image} className="project-image mb-3"/>
+                    {project.projectUrl && <>
+                        <h5>Repository:</h5>
+                        <a target="_blank" href={project.projectUrl}>{project.projectUrl}</a>
+                    </>}
+                    {project.liveUrl && 
+                    <>
+                        <h5>Live:</h5>
+                        <a target="_blank" href={project.liveUrl}>{project.liveUrl}</a>
+                    </>}
+                </div>
             </div>
-        </a>
+        </div>
     );
 }

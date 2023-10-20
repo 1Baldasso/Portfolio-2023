@@ -16,18 +16,25 @@
     border-radius: 25px;
 }
 .project-image{
-    width: 40%;
+    width: 100%;
     border-radius: 3%;
     box-shadow: .2rem .2rem 1rem #9b7e52a1;
+}
+#project-image-side{
+    width: 40%;
 }
 #reset-a p
 {
     text-align: justify;
-    font-size: 0.9rem;
+    font-size: calc((100vh/365.7143)*8);
 }
 
-@media screen and (max-width: 768px) {
-    .project-image{
+@media screen and (max-width: 1048px) {
+    .project-image-side{
         width: 80%;
+    }
+    #reset-a p
+    {
+        font-size: calc((100vh/365.7143)*12);
     }
 }

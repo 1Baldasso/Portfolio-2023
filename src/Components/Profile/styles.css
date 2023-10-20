@@ -1,17 +1,26 @@
-
-.skill-icon
-{
-    width: 3rem;
-    height: 3rem;
-}
 p{
     text-align: justify;
+    font-size: calc((100vh/365.7143)*11);
 }
+h2{
+    font-size: calc((100vh/365.7143)*20);
+}
+h3{
+    font-size: calc((100vh/365.7143)*15);
+}
+h4{
+    font-size: calc((100vh/365.7143)*13);
+}
+h5{
+    font-size: calc((100vh/365.7143)*11);
+}
+
 #teacher-pic{
     width: auto;
     height: 20rem;
     border-radius: 3%;
     box-shadow: 10px 10px 10px #000000;
+    object-fit: contain;
 }
 #about-me{
     gap: 6rem;

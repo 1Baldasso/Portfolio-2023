@@ -1,13 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
 import {Routes, Route} from 'react-router-dom';
 import {Helmet, HelmetProvider} from 'react-helmet-async';
 import About from './Pages/About';
 import Home from './Pages/Home';
 import Contact from './Pages/Contact';
-import LanguageController from './Controller/LanguageController.ts';
+
 function App() {
-  new LanguageController("pt-BR");
   return (
     <div className="App">
       <HelmetProvider>

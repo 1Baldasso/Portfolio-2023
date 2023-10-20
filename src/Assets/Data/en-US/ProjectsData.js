@@ -1,6 +1,7 @@
 import Flower from '../../Images/Projects/Flowers.png'
 import FullstackStore from '../../Images/Projects/FullstackStore.png'
 import FakeClockIn from '../../Images/Projects/FakeClockIn.png'
+import FullstackNext from '../../Images/Projects/FullstackNext.png'
 import LaravelAPI from '../../Images/Projects/LaravelAPI.png'
 import LORPrototiper from '../../Images/Projects/LORPrototiper.jpg'
 import SquidCardGame from '../../Images/Projects/SquidCardGame.png'
@@ -14,6 +15,16 @@ export default
         "Backend":[
             {
                 "id":1,
+                "name": "Fullstack Store Next.js - .NET Core",
+                "description": "Created as part of a technical test for a full-stack developer position, the project consists of an online store with product listings, purchases, and purchase reports. The backend was developed using .NET Core, and the frontend was built with Next.js. I am very pleased with the achieved outcome and the opportunity to enhance my full-stack development skills. Additionally, I was able to apply various techniques and methodologies for developing high-quality systems such as DDD, Redux, and Clean Code.",
+                "image": FullstackNext,
+                "liveUrl": "https://desafio-c-sfront.vercel.app/",
+                "projectUrl": "https://github.com/1Baldasso/desafioCSfront",
+                "date": "10-13-2023",
+                "techs": ".NET Core, Fast Endpoints,RESTful API, Azure, SQL Server, Next.js, Redux, TypeScript"
+            },
+            {
+                "id":2,
                 "name":"Fake Store Fullstack",
                 "description":"As part of a job interview, I created a full-stack project that allowed me to showcase my skills in back-end and front-end development. Using Entity Framework and SQL Server, I developed a custom backend and API, and utilized ASP.NET MVC for the front-end. Authentication was implemented by encrypting passwords and comparing them to those stored in the database. This project provided me with the opportunity to expand my knowledge and experience working with new tools and technologies, while honing my full-stack development skills.",
                 "image":FullstackStore,
@@ -22,7 +33,7 @@ export default
                 "techs":"C#, RESTful API ,ASP.NET MVC, Entity Framework, SQL Server"
             },
             {
-                "id":2,
+                "id":3,
                 "name":"Fullstack Store Node + React",
                 "description":"I developed a Fullstack project as part of a developer job test, using NodeJS and React in the backend and frontend, respectively. The project consists of a product listing that can be filtered by category (e.g. cold cuts, dairy) and sorted by criteria such as lowest price, highest price, or name. The frontend also has a search feature by product name and a details screen for each listed item. In addition, a shopping cart was implemented with buttons to add and remove items, displaying only the total value of the cart (without checkout). On the backend, a RESTful API was developed following Clean Code best practices, with unit tests and code documentation. The chosen database was MongoDB. The goal of the project was to demonstrate my skills as a Fullstack developer, using modern and popular technologies such as NodeJS, React, and MongoDB, as well as applying concepts of Clean Code, unit tests, and code documentation.",
                 "image":FullstackStoreNode,
@@ -31,7 +42,7 @@ export default
                 "techs":"Node JS, RESTful API, NestJS, React, MongoDB"
             },
             {
-                "id":3,
+                "id":4,
                 "name":"Fake Clock In System",
                 "description":"This project was also developed as part of a job interview, with a focus on creating a robust backend and API using Entity Framework and SQL Server. The main goal was to validate the system's business rules, following the TDD principle. These rules included preventing users from clocking in or out outside of working hours (between 8:00 and 18:00), and preventing them from clocking in or out multiple times in a row. No frontend was developed for this project, which was completed within a tight timeframe of just 22 hours.\n I'm pleased with the outcome of this project and the opportunity it provided to enhance my skills in agile development. I was able to experiment with different techniques and methodologies to deliver a high-quality system in a short amount of time.",
                 "image":FakeClockIn,
@@ -39,25 +50,24 @@ export default
                 "date":"02-17-2023",
                 "techs":"C#, RESTful API, Entity Framework, SQL Server"
             },
-            {
-                "id":4,
-                "name":"Laravel API",
-                "description":"This project was my first API, and it was outside my comfort zone as I used PHP+Laravel. I created the backend and API while immersing myself in understanding PHP syntax. The project was a simple API that involved a CRUD of stores and products, along with some data transformation under resources and controllers. No frontend was developed for this project.\n I am pleased with the outcome as I learned a new language and framework, and was able to apply this knowledge to a real-world project. It was a great opportunity for me to challenge myself and step out of my comfort zone, which helped me grow as a developer.",
-                "image":LaravelAPI,
-                "projectUrl":"https://github.com/1Baldasso/Desafio-Laravel",
-                "date":"02-14-2023",
-                "techs":"PHP, RESTful API, Laravel, MySQL"
-            },
-            {
-                "id":5,
-                "name":"Flower Budget Backend",
-                "description":"I developed this project while working for my family's company, aiming to address the daily struggle of weekly flower ordering. Witnessing the inefficiencies and pains our team experienced, I sought to create a solution that would simplify and streamline the process. The project underwent two iterations, the first using WinForms and the second requiring a restart due to its messy implementation. With enhanced expertise in C# and .NET Architecture, I was able to write cleaner, more comprehensible code, resulting in a highly efficient and user-friendly solution.",
-                "image":Flower,
-                "projectUrl":"https://github.com/lufloresdecor/Orcamento-de-Flores",
-                "date":"In Progress",
-                "techs":"C#, .NET, Entity Framework, SQL Server, Windows Forms"
-            },
-            
+            // {
+            //     "id":4,
+            //     "name":"Laravel API",
+            //     "description":"This project was my first API, and it was outside my comfort zone as I used PHP+Laravel. I created the backend and API while immersing myself in understanding PHP syntax. The project was a simple API that involved a CRUD of stores and products, along with some data transformation under resources and controllers. No frontend was developed for this project.\n I am pleased with the outcome as I learned a new language and framework, and was able to apply this knowledge to a real-world project. It was a great opportunity for me to challenge myself and step out of my comfort zone, which helped me grow as a developer.",
+            //     "image":LaravelAPI,
+            //     "projectUrl":"https://github.com/1Baldasso/Desafio-Laravel",
+            //     "date":"02-14-2023",
+            //     "techs":"PHP, RESTful API, Laravel, MySQL"
+            // },
+            // {
+            //     "id":5,
+            //     "name":"Flower Budget Backend",
+            //     "description":"I developed this project while working for my family's company, aiming to address the daily struggle of weekly flower ordering. Witnessing the inefficiencies and pains our team experienced, I sought to create a solution that would simplify and streamline the process. The project underwent two iterations, the first using WinForms and the second requiring a restart due to its messy implementation. With enhanced expertise in C# and .NET Architecture, I was able to write cleaner, more comprehensible code, resulting in a highly efficient and user-friendly solution.",
+            //     "image":Flower,
+            //     "projectUrl":"https://github.com/lufloresdecor/Orcamento-de-Flores",
+            //     "date":"In Progress",
+            //     "techs":"C#, .NET, Entity Framework, SQL Server, Windows Forms"
+            // },
         ],
         "Games":[
             {
@@ -83,7 +93,7 @@ export default
                 "name":"Mia is Back Home",
                 "description":"The first game developed by me. It was developed as final project for the Digital Games Discipline. It was inspired by my cat called Mia.",
                 "image":MiaIsBackHome,
-                "projectUrl":"https://1baldasso.itch.io/mias-back-home",
+                "liveUrl":"https://1baldasso.itch.io/mias-back-home",
                 "date":"11-25-2021",
                 "techs":"C#, Unity, Animations"
             },
@@ -92,7 +102,7 @@ export default
                 "name":"Runner 2.5D",
                 "description":"A minigame also developed as part of the Digital Games Discipline as a study for Animations and Sounds and Particle Effects.",
                 "image":Runner25D,
-                "projectUrl":"https://1baldasso.itch.io/runner-25d",
+                "liveUrl":"https://1baldasso.itch.io/runner-25d",
                 "date":"03-12-2022",
                 "techs":"C#, Unity, Animations, Audio Clips, Particle Effects"
             } 

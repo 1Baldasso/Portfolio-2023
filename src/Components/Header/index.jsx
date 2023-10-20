@@ -5,16 +5,15 @@ import Container from 'react-bootstrap/Container';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import "./styles.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useEffect, useState } from "react";
-import LanguageController from "../../Controller/LanguageController.ts";
+import { LanguageContext } from "../../Controller/LanguageProvider";
+import { useEffect, useState, useContext } from "react";
 
 
 export default function Header() {
     const event = new Event("languageChange");
-    const [MenuData, setMenuData] = useState(LanguageController.instance.getMenuData())
+    const {changeLanguage, menuData} = useContext(LanguageContext);
     function handleChangeLanguage() {
-        LanguageController.instance.changeLanguage();
-        setMenuData(LanguageController.instance.getMenuData());
+        changeLanguage();
     }
     useEffect(() => {
         document.addEventListener("languageChange", handleChangeLanguage);
@@ -42,9 +41,9 @@ export default function Header() {
                             </Offcanvas.Header>
                             <Offcanvas.Body>
                                 <Nav className="me-auto">
-                                    <Nav.Link href="/"><p className="meu-link">{MenuData.home}</p></Nav.Link>
-                                    <Nav.Link href="/about"><p className="meu-link">{MenuData.about}</p></Nav.Link>
-                                    <Nav.Link href="/contact"><p className="meu-link">{MenuData.contact}</p></Nav.Link>
+                                    <Nav.Link href="/"><p className="meu-link">{menuData.home}</p></Nav.Link>
+                                    <Nav.Link href="/about"><p className="meu-link">{menuData.about}</p></Nav.Link>
+                                    <Nav.Link href="/contact"><p className="meu-link">{menuData.contact}</p></Nav.Link>
                                 </Nav>
                             </Offcanvas.Body>
                         </Navbar.Offcanvas>
@@ -55,7 +54,7 @@ export default function Header() {
                         <Nav.Link className="meu-link" onClick={
                             ()=>{document.dispatchEvent(event)}
                         }>
-                            <span class="material-symbols-outlined">
+                            <span className="material-symbols-outlined">
                                 language
                             </span>
                         </Nav.Link>
