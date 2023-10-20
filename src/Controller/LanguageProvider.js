@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
 import  PtMenu  from '../Assets/Data/pt-BR/MenuData';
 import  EnMenu  from '../Assets/Data/en-US/MenuData';
 import  PtProjects  from '../Assets/Data/pt-BR/ProjectsData';
@@ -15,26 +15,51 @@ export const LanguageProvider = ({ children }) => {
   const [language, setLanguage] = useState('pt-BR');
   const [projects, setProjects] = useState(PtProjects.Projects);
   const [person, setPerson] = useState(PtPerson.Person);
-  const [menuData, setMenuData] = useState(PtMenu)
+  const [menuData, setMenuData] = useState(PtMenu);
 
-  const changeLanguage = () => {
-    if (language == 'pt-BR') {
-      setLanguage('en-US');
+  useEffect(()=>{
+    checkLanguage();
+  }, [language])
+
+  const checkLanguage = () =>
+  {
+    if(localStorage.getItem('language'))
+    {
+      const lang = localStorage.getItem('language')
+      setLanguage(lang);
+      setItems();
+    }
+    setItems();      
+  }
+
+  const setItems = () => {
+    if (language != 'pt-BR') {
       setPerson(EnPerson.Person);
       setProjects(EnProjects.Projects);
       setMenuData(EnMenu);
     }
-    else {
-      setLanguage('pt-BR');
+    else
+    {
       setPerson(PtPerson.Person);
       setProjects(PtProjects.Projects);
       setMenuData(PtMenu);
     }
+  }
+
+  const changeLanguage = () => {
+    if (language !== 'en-US') {
+      localStorage.setItem('language', 'en-US');
+    }
+    else {
+      localStorage.setItem('language', 'pt-BR');
+    }
+    checkLanguage();
   };
 
   return (
     <LanguageContext.Provider value={{ 
       changeLanguage,
+      checkLanguage,
       projects,
       menuData,
       person 

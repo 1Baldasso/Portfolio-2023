@@ -6,21 +6,14 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import "./styles.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { LanguageContext } from "../../Controller/LanguageProvider";
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useContext } from "react";
 
 
 export default function Header() {
-    const event = new Event("languageChange");
-    const {changeLanguage, menuData} = useContext(LanguageContext);
+    const {changeLanguage, menuData, checkLanguage} = useContext(LanguageContext);
     function handleChangeLanguage() {
         changeLanguage();
     }
-    useEffect(() => {
-        document.addEventListener("languageChange", handleChangeLanguage);
-        return () => {
-            document.removeEventListener("languageChange", handleChangeLanguage);
-        }
-    }, []);
     return (
         <header>
             <Navbar expand="lg" className="header">
@@ -52,7 +45,7 @@ export default function Header() {
                     <Navbar.Brand><h2 id="meu-nome">Lucas Baldasso</h2></Navbar.Brand>
                     <Nav>
                         <Nav.Link className="meu-link" onClick={
-                            ()=>{document.dispatchEvent(event)}
+                            ()=>{handleChangeLanguage()}
                         }>
                             <span className="material-symbols-outlined">
                                 language
